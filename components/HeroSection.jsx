@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
         >
           <Typewriter
-            words={["Empower Your Strength"]}
+            words={["Spark Your Fitness Journey With GlowFit"]}
             loop={0}
             cursor
             cursorStyle="|"

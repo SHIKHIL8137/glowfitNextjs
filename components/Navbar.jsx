@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -36,6 +37,32 @@ const Navbar = () => {
     }
   };
 
+  // Track scroll position to highlight active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "services", "about", "contact"];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const height = element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initialize on load
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.nav
       className="fixed top-0 z-50 w-full bg-gradient-to-b from-black/100 transition-all duration-300 ease-in-out"
@@ -46,7 +73,7 @@ const Navbar = () => {
       aria-label="Main navigation"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 w-full">
+        <div className="flex items-center justify-between h-16 w-full container mx-auto px-4">
           <motion.div
             className="flex-shrink-0"
             whileHover={{ scale: 1.05 }}
@@ -61,7 +88,11 @@ const Navbar = () => {
                 <motion.button
                   key={link.name}
                   onClick={() => handleScrollTo(link.href)}
-                  className="text-white hover:text-orange-700 px-1 py-2 text-sm font-medium border-b-2 border-transparent hover:border-orange-700 transition-colors duration-300 whitespace-nowrap"
+                  className={`px-1 py-2 text-sm font-medium border-b-2 transition-colors duration-300 whitespace-nowrap ${
+                    activeSection === link.href.substring(1)
+                      ? "text-orange-700 border-orange-700"
+                      : "text-white border-transparent hover:text-orange-700 hover:border-orange-700"
+                  }`}
                   whileHover={{ y: -2 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -189,7 +220,11 @@ const Navbar = () => {
                   handleScrollTo(link.href);
                   setIsMenuOpen(false);
                 }}
-                className="text-white hover:text-orange-700 block px-3 py-4 text-center text-xl font-medium w-full"
+                className={`block px-3 py-4 text-center text-xl font-medium w-full ${
+                  activeSection === link.href.substring(1)
+                    ? "text-orange-700"
+                    : "text-white"
+                }`}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
