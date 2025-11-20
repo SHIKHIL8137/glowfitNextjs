@@ -38,7 +38,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://glowfitwomensgym.com",
+    url: "https://glowfit-nextjs.vercel.app/",
     title: "GlowFit Women's Gym | Empowering Women's Fitness",
     description:
       "Empowering women to achieve their strongest, healthiest selves through personalized fitness programs.",
@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
               "@type": "SportsActivityLocation",
               "name": "GlowFit Women's Gym",
               "description": "Empowering women to achieve their strongest, healthiest selves through personalized fitness programs.",
-              "url": "https://glowfitwomensgym.com",
+              "url": "https://glowfit-nextjs.vercel.app/",
               "telephone": "+91 7736219344",
               "address": {
                 "@type": "PostalAddress",

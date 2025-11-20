@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://glowfitwomensgym.com/sitemap.xml
+Sitemap: https://glowfit-nextjs.vercel.app/sitemap.xml
