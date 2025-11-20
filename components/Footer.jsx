@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import Logo from "./Logo";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -62,29 +63,33 @@ export const Footer = () => {
         <div className="container mx-auto max-w-6xl py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center md:text-left">
-              <h2 className="text-2xl font-bold mb-4 text-[#FFD36E]">
-                GlowFit Women's Gym
-              </h2>
-              <p className="text-gray-300 mb-4">
-                Empowering women to achieve their strongest, healthiest selves
-                through personalized fitness programs and a supportive
-                community.
-              </p>
-              <div className="flex justify-center md:justify-start space-x-4">
-                {socialMedia.map((social, index) => (
-                  social?.url !== "" && (<motion.a
-                    key={index}
-                    href={social.url}
-                    className="bg-black bg-opacity-30 rounded-full p-2 inline-flex items-center justify-center"
-                    whileHover={{
-                      y: -3,
-                      backgroundColor: "#C01818",
-                      transition: { duration: 0.3 },
-                    }}
-                  >
-                    {social.icon}
-                  </motion.a>)
-                ))}
+              <div className="flex flex-col items-center md:items-start gap-3">
+                <Logo />
+
+                <p className="text-gray-300 max-w-xs md:max-w-sm">
+                  Empowering women to achieve their strongest, healthiest selves
+                  through personalized fitness programs and a supportive
+                  community.
+                </p>
+              </div>
+              <div className="flex justify-center md:justify-start space-x-4 mt-4">
+                {socialMedia.map(
+                  (social, index) =>
+                    social?.url !== "" && (
+                      <motion.a
+                        key={index}
+                        href={social.url}
+                        className="bg-black bg-opacity-30 rounded-full p-2 inline-flex items-center justify-center"
+                        whileHover={{
+                          y: -3,
+                          backgroundColor: "#C01818",
+                          transition: { duration: 0.3 },
+                        }}
+                      >
+                        {social.icon}
+                      </motion.a>
+                    )
+                )}
               </div>
             </div>
 

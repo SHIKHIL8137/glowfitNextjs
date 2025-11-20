@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,13 +50,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <button
-              onClick={() => handleScrollTo("#home")}
-              className="text-white font-bold tracking-wide text-xl"
-              style={{ fontFamily: "Arial, sans-serif" }}
-            >
-              GlowFit Women's Gym
-            </button>
+            <Logo />
           </motion.div>
 
           <div className="hidden md:block">
