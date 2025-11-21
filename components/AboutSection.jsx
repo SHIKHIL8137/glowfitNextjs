@@ -33,6 +33,7 @@ const AboutSection = () => {
               >
                 About GlowFit <span className="text-orange-700">Women's Gym</span>
               </h2>
+              <h2 className="sr-only">About GlowFit Women's Gym</h2>
               <p className="text-gray-300 text-lg mb-6">
                 At GlowFit Women's Gym, we're dedicated to empowering women to achieve
                 their strongest, healthiest selves. Our women-focused facility
@@ -55,7 +56,9 @@ const AboutSection = () => {
                 With cutting-edge equipment, diverse class offerings designed specifically for women, and a team
                 of certified trainers who are passionate about women's health and
                 wellness, GlowFit Women's Gym is more than just a gym - it's a community
-                of women supporting each other on their fitness journeys.
+                of women supporting each other on their fitness journeys. We follow evidence-based practices from 
+                <a href="https://www.womenshealth.gov/" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">leading women's health resources</a> and 
+                <a href="https://www.acsm.org/" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">certified fitness organizations</a> to ensure the best results for our members.
               </p>
             </motion.div>
 

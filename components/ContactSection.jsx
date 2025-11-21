@@ -51,8 +51,11 @@ const ContactSection = () => {
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Get in touch with us to join our women's fitness community
+            Get in touch with us to join our women's fitness community. For general health information, visit 
+            <a href="https://www.womenshealth.gov/" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">Women's Health.gov</a>.
           </motion.p>
+
+          <h2 className="sr-only">Contact GlowFit Women's Gym</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {contactInfo.map((item, index) => (

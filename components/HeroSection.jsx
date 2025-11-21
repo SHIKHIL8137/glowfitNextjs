@@ -53,6 +53,16 @@ const HeroSection = () => {
         >
           Designed exclusively for women to build confidence, strength, and community
         </motion.p>
+
+        <motion.h2
+          className="sr-only"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          Women's Fitness Programs at GlowFit
+        </motion.h2>
       </div>
     </section>
   );

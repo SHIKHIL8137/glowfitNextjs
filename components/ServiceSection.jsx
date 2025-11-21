@@ -95,8 +95,15 @@ const ServiceSection = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           Discover our range of specialized fitness programs designed
-          exclusively for women
+          exclusively for women. Learn more about 
+          <a href="https://www.healthline.com/health/fitness-exercise/benefits-of-yoga" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">yoga benefits</a>, 
+          <a href="https://www.medicalnewstoday.com/articles/323466" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">strength training for women</a>, and 
+          <a href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm" target="_blank" rel="noopener noreferrer" className="text-[#FFD36E] hover:underline">cardiovascular health</a>.
         </motion.p>
+
+        <motion.h2 className="sr-only">
+          Our Fitness Services Include Yoga, Zumba, Weight Training, Cardio, Physique Transformation, Body Transformation, CrossFit, and Aerobics
+        </motion.h2>
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -18,7 +18,7 @@ export const metadata = {
     template: "%s | GlowFit Women's Gym",
   },
   description:
-    "Discover GlowFit Women's Gym, a supportive fitness community designed exclusively for women. Join our personalized fitness programs including strength training, yoga, dance fitness, and more. Empowering women to achieve their strongest, healthiest selves.",
+    "Empowering women to achieve their strongest, healthiest selves through personalized fitness programs, strength training, yoga, and dance fitness. Join our supportive community of women-focused wellness.",
   keywords: [
     "women's gym",
     "female fitness",
@@ -44,7 +44,7 @@ export const metadata = {
     url: "https://glowfit-nextjs.vercel.app/",
     title: "GlowFit Women's Gym | Empowering Women's Fitness",
     description:
-      "Discover GlowFit Women's Gym, a supportive fitness community designed exclusively for women. Join our personalized fitness programs including strength training, yoga, dance fitness, and more.",
+      "Empowering women to achieve their strongest, healthiest selves through personalized fitness programs, strength training, yoga, and dance fitness. Join our supportive community of women-focused wellness.",
     siteName: "GlowFit Women's Gym",
     images: [
       {
@@ -54,14 +54,17 @@ export const metadata = {
         alt: "GlowFit Women's Gym - Empowering Women's Fitness",
       },
     ],
+    videos: [],
+    audio: [],
   },
   twitter: {
     card: "summary_large_image",
     title: "GlowFit Women's Gym | Empowering Women's Fitness",
     description:
-      "Discover GlowFit Women's Gym, a supportive fitness community designed exclusively for women. Join our personalized fitness programs including strength training, yoga, dance fitness, and more.",
+      "Empowering women to achieve their strongest, healthiest selves through personalized fitness programs, strength training, yoga, and dance fitness. Join our supportive community of women-focused wellness.",
     images: ["/assets/logo/Logo.png"],
     creator: "@GlowFitGym",
+    site: "@GlowFitGym",
   },
   viewport: {
     width: "device-width",
@@ -69,6 +72,9 @@ export const metadata = {
     maximumScale: 1,
   },
   manifest: "/manifest.json",
+  other: {
+    "og:updated_time": "2025-11-21T10:00:00+00:00",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -96,7 +102,18 @@ export default function RootLayout({ children }) {
               "openingHours": [
                 "Mo-Fr 06:00-22:00",
                 "Sa-Su 08:00-20:00"
-              ]
+              ],
+              "offers": {
+                "@type": "Offer",
+                "category": "Fitness Classes",
+                "priceCurrency": "INR",
+                "acceptedPaymentMethods": [
+                  "Credit Card",
+                  "Debit Card",
+                  "Cash",
+                  "UPI"
+                ]
+              }
             })
           }}
         />
