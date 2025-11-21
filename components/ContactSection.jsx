@@ -52,7 +52,7 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Get in touch with us to join our women's fitness community. For general health information, visit 
-            <p className="text-[#FFD36E] hover:underline">Women's Health.gov</p>.
+            <a className="text-[#FFD36E]">Women's Health.gov</a>.
           </motion.p>
 
           <h2 className="sr-only">Contact GlowFit Women's Gym</h2>

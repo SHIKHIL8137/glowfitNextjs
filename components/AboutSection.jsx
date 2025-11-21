@@ -57,8 +57,8 @@ const AboutSection = () => {
                 of certified trainers who are passionate about women's health and
                 wellness, GlowFit Women's Gym is more than just a gym - it's a community
                 of women supporting each other on their fitness journeys. We follow evidence-based practices from 
-                <p className="text-[#FFD36E] hover:underline">leading women's health resources</p> and 
-                <p className="text-[#FFD36E] hover:underline">certified fitness organizations</p> to ensure the best results for our members.
+                <a className="text-[#FFD36E] ">leading women's health resources</a> and 
+                <a className="text-[#FFD36E] ">certified fitness organizations</a> to ensure the best results for our members.
               </p>
             </motion.div>
 

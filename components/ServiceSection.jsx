@@ -96,9 +96,9 @@ const ServiceSection = () => {
         >
           Discover our range of specialized fitness programs designed
           exclusively for women. Learn more about 
-          <p className="text-[#FFD36E] hover:underline">yoga benefits</p>, 
-          <p className="text-[#FFD36E] hover:underline">strength training for women</p>, and 
-          <p className="text-[#FFD36E] hover:underline">cardiovascular health</p>.
+          <a className="text-[#FFD36E]">yoga benefits</a>, 
+          <a className="text-[#FFD36E]">strength training for women</a>, and 
+          <a className="text-[#FFD36E]">cardiovascular health</a>.
         </motion.p>
 
         <motion.h2 className="sr-only">
