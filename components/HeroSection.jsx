@@ -12,9 +12,9 @@ const HeroSection = () => {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center w-full"
+      className="relative min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: "url('/assets/bg/hero-bg.jpg')",
+        backgroundImage: "url('/assets/bg/hero-bg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

@@ -10,7 +10,7 @@ const AboutSection = () => {
         id="about"
         className="min-h-screen flex items-center justify-center py-16 px-4 relative"
         style={{
-          backgroundImage: "url('/assets/bg/about-bg.jpg')",
+          backgroundImage: "url('/assets/bg/about-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

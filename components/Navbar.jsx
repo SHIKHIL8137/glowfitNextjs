@@ -114,7 +114,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <motion.button
               onClick={() => handleScrollTo("#contact")}
-              className="bg-[#C01818] hover:bg-[#8A0F0F] text-white font-bold py-2 px-4 sm:px-6 rounded-full text-sm transition duration-300 ease-in-out whitespace-nowrap"
+              className="bg-outline-black border border-orange-700 opacity-80 text-white hover:bg-orange-700 hover:opacity-100 font-bold py-2 px-4 sm:px-6 rounded-full text-sm transition duration-300 ease-in-out whitespace-nowrap"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Join Now"
